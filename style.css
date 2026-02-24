@@ -582,8 +582,14 @@ img {
   border-top: 1px solid #2a2a2a;
   border-bottom: 1px solid #2a2a2a;
   color: #fff;
-  text-align: center;
   padding: 80px 0;
+}
+
+.section-cta .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .section-title--light {
@@ -601,10 +607,17 @@ img {
   line-height: 1.8;
 }
 
+.section-cta .btn {
+  max-width: 100%;
+  white-space: normal;
+  word-break: keep-all;
+}
+
 .cta-alt {
   margin-top: 32px;
   font-size: 0.9rem;
   color: #888;
+  text-align: center;
 }
 
 .cta-alt a {
@@ -631,8 +644,17 @@ img {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
   .hero {
     padding: 64px 0 56px;
+  }
+
+  .hero-tag {
+    font-size: 0.75rem;
+    padding: 5px 12px;
   }
 
   .hero-title {
@@ -643,6 +665,11 @@ img {
     font-size: 0.9rem;
   }
 
+  .hero .btn {
+    width: 100%;
+    padding: 14px 24px;
+  }
+
   .section {
     padding: 56px 0;
   }
@@ -651,14 +678,26 @@ img {
     font-size: 1.4rem;
   }
 
+  .section-title::after {
+    margin: 12px auto 32px;
+  }
+
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 12px;
+  }
+
+  .about-card {
+    padding: 24px 20px;
   }
 
   .plan-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
+  }
+
+  .plan-card {
+    padding: 28px 20px 24px;
   }
 
   .plan-card--featured {
@@ -667,34 +706,117 @@ img {
 
   .equip-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 12px;
+  }
+
+  .equip-card {
+    padding: 20px 16px;
   }
 
   .options-box {
-    padding: 24px 20px;
+    padding: 20px 16px;
+  }
+
+  .options-box li {
+    font-size: 0.85rem;
   }
 
   .testimonial blockquote {
-    padding: 28px 20px;
+    padding: 24px 20px;
+  }
+
+  .testimonial blockquote::before {
+    font-size: 3rem;
+    top: 8px;
+    left: 12px;
   }
 
   .btn-large {
-    padding: 14px 32px;
+    padding: 14px 24px;
     font-size: 1rem;
+    width: 100%;
+  }
+
+  .section-cta {
+    padding: 56px 0;
+  }
+
+  .cta-lead {
+    font-size: 0.95rem;
+  }
+
+  .cta-alt {
+    font-size: 0.85rem;
+    word-break: break-all;
   }
 
   .timeline {
     padding-left: 36px;
   }
+
+  .timeline-content h3 {
+    font-size: 1rem;
+  }
+
+  .timeline-time {
+    display: block;
+    margin-left: 0;
+    margin-top: 4px;
+    width: fit-content;
+  }
 }
 
 @media (max-width: 480px) {
   html {
-    font-size: 15px;
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 14px;
+  }
+
+  .hero {
+    padding: 48px 0 44px;
+  }
+
+  .hero-tag {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    margin-bottom: 16px;
   }
 
   .hero-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 24px;
+  }
+
+  .hero-list {
+    font-size: 0.85rem;
+    margin-bottom: 28px;
+  }
+
+  .section {
+    padding: 44px 0;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+  }
+
+  .about-card {
+    padding: 20px 16px;
+  }
+
+  .about-card h3 {
+    font-size: 1rem;
+  }
+
+  .about-card p {
+    font-size: 0.85rem;
+  }
+
+  .plan-card {
+    padding: 24px 16px 20px;
   }
 
   .plan-name {
@@ -703,5 +825,26 @@ img {
 
   .price-now {
     font-size: 1.6rem;
+  }
+
+  .plan-features li {
+    font-size: 0.825rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.85rem;
+  }
+
+  .equip-card li {
+    font-size: 0.825rem;
+  }
+
+  .testimonial blockquote p {
+    font-size: 0.875rem;
+  }
+
+  .footer {
+    font-size: 0.75rem;
+    padding: 20px 0;
   }
 }
